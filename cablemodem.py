@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 quote_page = 'http://192.168.100.1/cmSignalData.htm'
 
 # query the website and return the html to the variable 'page'
-page = urllib.request(quote_page)
+page = urllib.request.urlopen(quote_page)
 
 # parse the html using beautiful soup and store in variable 'soup'
 soup = BeautifulSoup(page, 'html.parser')
